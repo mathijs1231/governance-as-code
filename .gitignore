@@ -1,0 +1,21 @@
+# Local run output (evidence, test results, bootstrap records)
+out/
+*.log
+# Rendered deployment settings may contain secrets - never commit them
+**/deploymentsettings*.json
+!configuration/deployment-settings/**
+# Live DLP exports (taken with pac admin / Invoke-GaCDlpReconcile -ReportUnclassified); keep the folder only
+dlp/snapshots/*
+!dlp/snapshots/README.md
+# Solution build output
+*.zip
+# Certificates / secrets
+*.pfx
+*.pem
+*.key
+.env
+# Tooling
+.vs/
+.vscode/*
+!.vscode/extensions.json
+TestResults/
